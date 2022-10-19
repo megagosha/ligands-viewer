@@ -1,0 +1,577 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		54870F32290050940055B88A /* LigandsDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54870F31290050940055B88A /* LigandsDownloader.swift */; };
+		54870F34290051F80055B88A /* ligands.txt in Resources */ = {isa = PBXBuildFile; fileRef = 54870F33290051F80055B88A /* ligands.txt */; };
+		54B5719E29004D3100E8A412 /* SwiftyProteinApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54B5719D29004D3100E8A412 /* SwiftyProteinApp.swift */; };
+		54B571A229004D3200E8A412 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 54B571A129004D3200E8A412 /* Assets.xcassets */; };
+		54B571A529004D3200E8A412 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 54B571A429004D3200E8A412 /* Preview Assets.xcassets */; };
+		54B571B129004D7400E8A412 /* MetalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54B571AC29004D7400E8A412 /* MetalView.swift */; };
+		54B571B229004D7400E8A412 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54B571AD29004D7400E8A412 /* ContentView.swift */; };
+		54B571B329004D7400E8A412 /* AtomSelectedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54B571AE29004D7400E8A412 /* AtomSelectedView.swift */; };
+		54B571B429004D7400E8A412 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54B571AF29004D7400E8A412 /* LoadingView.swift */; };
+		54B571B529004D7400E8A412 /* LigandsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54B571B029004D7400E8A412 /* LigandsListView.swift */; };
+		54B571B729004D9F00E8A412 /* LigandLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54B571B629004D9F00E8A412 /* LigandLoader.swift */; };
+		54B571BD29004DE900E8A412 /* AtomLigand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54B571BA29004DE900E8A412 /* AtomLigand.swift */; };
+		54B571BE29004DE900E8A412 /* Bond.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54B571BB29004DE900E8A412 /* Bond.swift */; };
+		54B571BF29004DE900E8A412 /* Ligand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54B571BC29004DE900E8A412 /* Ligand.swift */; };
+		54B571C329004E3B00E8A412 /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54B571C229004E3B00E8A412 /* Parser.swift */; };
+		54B571C729004EA400E8A412 /* Atom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54B571C629004EA400E8A412 /* Atom.swift */; };
+		54B571D029004EBA00E8A412 /* LigandScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54B571CA29004EBA00E8A412 /* LigandScene.swift */; };
+		54B571D129004EBA00E8A412 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54B571CB29004EBA00E8A412 /* Colors.swift */; };
+		54B571D229004EBA00E8A412 /* Camera.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54B571CD29004EBA00E8A412 /* Camera.swift */; };
+		54B571D329004EBA00E8A412 /* Cylinder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54B571CE29004EBA00E8A412 /* Cylinder.swift */; };
+		54B571DD29004EC200E8A412 /* Mesh.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54B571D429004EC100E8A412 /* Mesh.swift */; };
+		54B571DE29004EC200E8A412 /* ProgrammableModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54B571D529004EC100E8A412 /* ProgrammableModel.swift */; };
+		54B571DF29004EC200E8A412 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54B571D629004EC100E8A412 /* Settings.swift */; };
+		54B571E029004EC200E8A412 /* ObjectId.metal in Sources */ = {isa = PBXBuildFile; fileRef = 54B571D729004EC100E8A412 /* ObjectId.metal */; };
+		54B571E129004EC200E8A412 /* InputController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54B571D829004EC100E8A412 /* InputController.swift */; };
+		54B571E229004EC200E8A412 /* Lighting.metal in Sources */ = {isa = PBXBuildFile; fileRef = 54B571D929004EC100E8A412 /* Lighting.metal */; };
+		54B571E329004EC200E8A412 /* Renderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54B571DB29004EC200E8A412 /* Renderer.swift */; };
+		54B571E429004EC200E8A412 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54B571DC29004EC200E8A412 /* Model.swift */; };
+		54B571E829004EC700E8A412 /* Submesh.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54B571E529004EC700E8A412 /* Submesh.swift */; };
+		54B571E929004EC700E8A412 /* SceneLighting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54B571E629004EC700E8A412 /* SceneLighting.swift */; };
+		54B571EA29004EC700E8A412 /* Shaders.metal in Sources */ = {isa = PBXBuildFile; fileRef = 54B571E729004EC700E8A412 /* Shaders.metal */; };
+		54B571EF29004ECC00E8A412 /* Transform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54B571EC29004ECC00E8A412 /* Transform.swift */; };
+		54B571F229004ED000E8A412 /* VertexDescriptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54B571F129004ED000E8A412 /* VertexDescriptor.swift */; };
+		54B571F429004ED700E8A412 /* MathLibrary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54B571F329004ED700E8A412 /* MathLibrary.swift */; };
+		54B571F629004EF700E8A412 /* RenderPass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54B571F529004EF700E8A412 /* RenderPass.swift */; };
+		54B571FB29004F0900E8A412 /* PipelineStates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54B571F829004F0900E8A412 /* PipelineStates.swift */; };
+		54B571FC29004F0900E8A412 /* ForwardRenderPass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54B571F929004F0900E8A412 /* ForwardRenderPass.swift */; };
+		54B571FD29004F0900E8A412 /* ObjectIdRenderPass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54B571FA29004F0900E8A412 /* ObjectIdRenderPass.swift */; };
+		54B5720029004F4200E8A412 /* ZIPFoundation in Frameworks */ = {isa = PBXBuildFile; productRef = 54B571FF29004F4200E8A412 /* ZIPFoundation */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		54870F31290050940055B88A /* LigandsDownloader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LigandsDownloader.swift; sourceTree = "<group>"; };
+		54870F33290051F80055B88A /* ligands.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ligands.txt; sourceTree = "<group>"; };
+		54B5719A29004D3100E8A412 /* swifty-protein.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "swifty-protein.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		54B5719D29004D3100E8A412 /* SwiftyProteinApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftyProteinApp.swift; sourceTree = "<group>"; };
+		54B571A129004D3200E8A412 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		54B571A429004D3200E8A412 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		54B571AC29004D7400E8A412 /* MetalView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MetalView.swift; sourceTree = "<group>"; };
+		54B571AD29004D7400E8A412 /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		54B571AE29004D7400E8A412 /* AtomSelectedView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AtomSelectedView.swift; sourceTree = "<group>"; };
+		54B571AF29004D7400E8A412 /* LoadingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		54B571B029004D7400E8A412 /* LigandsListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LigandsListView.swift; sourceTree = "<group>"; };
+		54B571B629004D9F00E8A412 /* LigandLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LigandLoader.swift; sourceTree = "<group>"; };
+		54B571BA29004DE900E8A412 /* AtomLigand.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AtomLigand.swift; sourceTree = "<group>"; };
+		54B571BB29004DE900E8A412 /* Bond.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Bond.swift; sourceTree = "<group>"; };
+		54B571BC29004DE900E8A412 /* Ligand.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ligand.swift; sourceTree = "<group>"; };
+		54B571C229004E3B00E8A412 /* Parser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Parser.swift; sourceTree = "<group>"; };
+		54B571C629004EA400E8A412 /* Atom.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Atom.swift; sourceTree = "<group>"; };
+		54B571CA29004EBA00E8A412 /* LigandScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LigandScene.swift; sourceTree = "<group>"; };
+		54B571CB29004EBA00E8A412 /* Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		54B571CC29004EBA00E8A412 /* Common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Common.h; sourceTree = "<group>"; };
+		54B571CD29004EBA00E8A412 /* Camera.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Camera.swift; sourceTree = "<group>"; };
+		54B571CE29004EBA00E8A412 /* Cylinder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cylinder.swift; sourceTree = "<group>"; };
+		54B571D429004EC100E8A412 /* Mesh.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Mesh.swift; sourceTree = "<group>"; };
+		54B571D529004EC100E8A412 /* ProgrammableModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgrammableModel.swift; sourceTree = "<group>"; };
+		54B571D629004EC100E8A412 /* Settings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
+		54B571D729004EC100E8A412 /* ObjectId.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = ObjectId.metal; sourceTree = "<group>"; };
+		54B571D829004EC100E8A412 /* InputController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InputController.swift; sourceTree = "<group>"; };
+		54B571D929004EC100E8A412 /* Lighting.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = Lighting.metal; sourceTree = "<group>"; };
+		54B571DA29004EC200E8A412 /* Lighting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Lighting.h; sourceTree = "<group>"; };
+		54B571DB29004EC200E8A412 /* Renderer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Renderer.swift; sourceTree = "<group>"; };
+		54B571DC29004EC200E8A412 /* Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		54B571E529004EC700E8A412 /* Submesh.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Submesh.swift; sourceTree = "<group>"; };
+		54B571E629004EC700E8A412 /* SceneLighting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneLighting.swift; sourceTree = "<group>"; };
+		54B571E729004EC700E8A412 /* Shaders.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = Shaders.metal; sourceTree = "<group>"; };
+		54B571EC29004ECC00E8A412 /* Transform.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Transform.swift; sourceTree = "<group>"; };
+		54B571F129004ED000E8A412 /* VertexDescriptor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VertexDescriptor.swift; sourceTree = "<group>"; };
+		54B571F329004ED700E8A412 /* MathLibrary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MathLibrary.swift; sourceTree = "<group>"; };
+		54B571F529004EF700E8A412 /* RenderPass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RenderPass.swift; sourceTree = "<group>"; };
+		54B571F829004F0900E8A412 /* PipelineStates.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PipelineStates.swift; sourceTree = "<group>"; };
+		54B571F929004F0900E8A412 /* ForwardRenderPass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForwardRenderPass.swift; sourceTree = "<group>"; };
+		54B571FA29004F0900E8A412 /* ObjectIdRenderPass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ObjectIdRenderPass.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		54B5719729004D3100E8A412 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				54B5720029004F4200E8A412 /* ZIPFoundation in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		54870F35290052E70055B88A /* Objects */ = {
+			isa = PBXGroup;
+			children = (
+				54B571D529004EC100E8A412 /* ProgrammableModel.swift */,
+				54B571CE29004EBA00E8A412 /* Cylinder.swift */,
+				54B571C629004EA400E8A412 /* Atom.swift */,
+			);
+			path = Objects;
+			sourceTree = "<group>";
+		};
+		54870F362900530F0055B88A /* Shaders+Headers */ = {
+			isa = PBXGroup;
+			children = (
+				54B571E729004EC700E8A412 /* Shaders.metal */,
+				54B571CC29004EBA00E8A412 /* Common.h */,
+				54B571DA29004EC200E8A412 /* Lighting.h */,
+				54B571D929004EC100E8A412 /* Lighting.metal */,
+				54B571D729004EC100E8A412 /* ObjectId.metal */,
+			);
+			path = "Shaders+Headers";
+			sourceTree = "<group>";
+		};
+		54870F3729005CC70055B88A /* Renderer */ = {
+			isa = PBXGroup;
+			children = (
+				54B571D429004EC100E8A412 /* Mesh.swift */,
+				54B571F129004ED000E8A412 /* VertexDescriptor.swift */,
+				54B571F729004EFA00E8A412 /* RenderPasses */,
+				54B571DB29004EC200E8A412 /* Renderer.swift */,
+			);
+			path = Renderer;
+			sourceTree = "<group>";
+		};
+		54B5719129004D3100E8A412 = {
+			isa = PBXGroup;
+			children = (
+				54B5719C29004D3100E8A412 /* swifty-protein */,
+				54B5719B29004D3100E8A412 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		54B5719B29004D3100E8A412 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				54B5719A29004D3100E8A412 /* swifty-protein.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		54B5719C29004D3100E8A412 /* swifty-protein */ = {
+			isa = PBXGroup;
+			children = (
+				54870F33290051F80055B88A /* ligands.txt */,
+				54B571C829004EAA00E8A412 /* LigandViewerEngine */,
+				54B571C129004E0300E8A412 /* LigandsParser */,
+				54B571AB29004D5400E8A412 /* Views */,
+				54B571A129004D3200E8A412 /* Assets.xcassets */,
+				54B571A329004D3200E8A412 /* Preview Content */,
+			);
+			path = "swifty-protein";
+			sourceTree = "<group>";
+		};
+		54B571A329004D3200E8A412 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				54B571A429004D3200E8A412 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		54B571AB29004D5400E8A412 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				54B571AE29004D7400E8A412 /* AtomSelectedView.swift */,
+				54B571AD29004D7400E8A412 /* ContentView.swift */,
+				54B571B029004D7400E8A412 /* LigandsListView.swift */,
+				54B571AF29004D7400E8A412 /* LoadingView.swift */,
+				54B571AC29004D7400E8A412 /* MetalView.swift */,
+				54B5719D29004D3100E8A412 /* SwiftyProteinApp.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		54B571C029004DEE00E8A412 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				54B571C229004E3B00E8A412 /* Parser.swift */,
+				54B571BA29004DE900E8A412 /* AtomLigand.swift */,
+				54B571BB29004DE900E8A412 /* Bond.swift */,
+				54B571BC29004DE900E8A412 /* Ligand.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		54B571C129004E0300E8A412 /* LigandsParser */ = {
+			isa = PBXGroup;
+			children = (
+				54B571C029004DEE00E8A412 /* Entities */,
+				54B571B629004D9F00E8A412 /* LigandLoader.swift */,
+				54870F31290050940055B88A /* LigandsDownloader.swift */,
+			);
+			path = LigandsParser;
+			sourceTree = "<group>";
+		};
+		54B571C829004EAA00E8A412 /* LigandViewerEngine */ = {
+			isa = PBXGroup;
+			children = (
+				54870F362900530F0055B88A /* Shaders+Headers */,
+				54B571EC29004ECC00E8A412 /* Transform.swift */,
+				54B571E529004EC700E8A412 /* Submesh.swift */,
+				54B571E629004EC700E8A412 /* SceneLighting.swift */,
+				54B571CD29004EBA00E8A412 /* Camera.swift */,
+				54B571CB29004EBA00E8A412 /* Colors.swift */,
+				54B571D829004EC100E8A412 /* InputController.swift */,
+				54B571DC29004EC200E8A412 /* Model.swift */,
+				54B571D629004EC100E8A412 /* Settings.swift */,
+				54870F35290052E70055B88A /* Objects */,
+				54870F3729005CC70055B88A /* Renderer */,
+				54B571F329004ED700E8A412 /* MathLibrary.swift */,
+				54B571CA29004EBA00E8A412 /* LigandScene.swift */,
+			);
+			path = LigandViewerEngine;
+			sourceTree = "<group>";
+		};
+		54B571F729004EFA00E8A412 /* RenderPasses */ = {
+			isa = PBXGroup;
+			children = (
+				54B571F929004F0900E8A412 /* ForwardRenderPass.swift */,
+				54B571FA29004F0900E8A412 /* ObjectIdRenderPass.swift */,
+				54B571F829004F0900E8A412 /* PipelineStates.swift */,
+				54B571F529004EF700E8A412 /* RenderPass.swift */,
+			);
+			path = RenderPasses;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		54B5719929004D3100E8A412 /* swifty-protein */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 54B571A829004D3200E8A412 /* Build configuration list for PBXNativeTarget "swifty-protein" */;
+			buildPhases = (
+				54B5719629004D3100E8A412 /* Sources */,
+				54B5719729004D3100E8A412 /* Frameworks */,
+				54B5719829004D3100E8A412 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "swifty-protein";
+			packageProductDependencies = (
+				54B571FF29004F4200E8A412 /* ZIPFoundation */,
+			);
+			productName = "swifty-protein";
+			productReference = 54B5719A29004D3100E8A412 /* swifty-protein.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		54B5719229004D3100E8A412 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1400;
+				LastUpgradeCheck = 1400;
+				TargetAttributes = {
+					54B5719929004D3100E8A412 = {
+						CreatedOnToolsVersion = 14.0;
+					};
+				};
+			};
+			buildConfigurationList = 54B5719529004D3100E8A412 /* Build configuration list for PBXProject "swifty-protein" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 54B5719129004D3100E8A412;
+			packageReferences = (
+				54B571FE29004F4100E8A412 /* XCRemoteSwiftPackageReference "ZIPFoundation" */,
+			);
+			productRefGroup = 54B5719B29004D3100E8A412 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				54B5719929004D3100E8A412 /* swifty-protein */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		54B5719829004D3100E8A412 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				54B571A529004D3200E8A412 /* Preview Assets.xcassets in Resources */,
+				54870F34290051F80055B88A /* ligands.txt in Resources */,
+				54B571A229004D3200E8A412 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		54B5719629004D3100E8A412 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				54B571D229004EBA00E8A412 /* Camera.swift in Sources */,
+				54B571D329004EBA00E8A412 /* Cylinder.swift in Sources */,
+				54B571B329004D7400E8A412 /* AtomSelectedView.swift in Sources */,
+				54B571D129004EBA00E8A412 /* Colors.swift in Sources */,
+				54B571FD29004F0900E8A412 /* ObjectIdRenderPass.swift in Sources */,
+				54B571FB29004F0900E8A412 /* PipelineStates.swift in Sources */,
+				54B571C329004E3B00E8A412 /* Parser.swift in Sources */,
+				54B571B729004D9F00E8A412 /* LigandLoader.swift in Sources */,
+				54B571DD29004EC200E8A412 /* Mesh.swift in Sources */,
+				54B571B129004D7400E8A412 /* MetalView.swift in Sources */,
+				54B571EA29004EC700E8A412 /* Shaders.metal in Sources */,
+				54B571E029004EC200E8A412 /* ObjectId.metal in Sources */,
+				54B571DF29004EC200E8A412 /* Settings.swift in Sources */,
+				54B571E429004EC200E8A412 /* Model.swift in Sources */,
+				54B571F229004ED000E8A412 /* VertexDescriptor.swift in Sources */,
+				54B571F629004EF700E8A412 /* RenderPass.swift in Sources */,
+				54B571BD29004DE900E8A412 /* AtomLigand.swift in Sources */,
+				54B571F429004ED700E8A412 /* MathLibrary.swift in Sources */,
+				54B571E929004EC700E8A412 /* SceneLighting.swift in Sources */,
+				54B571B529004D7400E8A412 /* LigandsListView.swift in Sources */,
+				54B571BE29004DE900E8A412 /* Bond.swift in Sources */,
+				54B571BF29004DE900E8A412 /* Ligand.swift in Sources */,
+				54B571E229004EC200E8A412 /* Lighting.metal in Sources */,
+				54B571E329004EC200E8A412 /* Renderer.swift in Sources */,
+				54B571B229004D7400E8A412 /* ContentView.swift in Sources */,
+				54B571EF29004ECC00E8A412 /* Transform.swift in Sources */,
+				54B5719E29004D3100E8A412 /* SwiftyProteinApp.swift in Sources */,
+				54B571DE29004EC200E8A412 /* ProgrammableModel.swift in Sources */,
+				54870F32290050940055B88A /* LigandsDownloader.swift in Sources */,
+				54B571C729004EA400E8A412 /* Atom.swift in Sources */,
+				54B571D029004EBA00E8A412 /* LigandScene.swift in Sources */,
+				54B571E129004EC200E8A412 /* InputController.swift in Sources */,
+				54B571B429004D7400E8A412 /* LoadingView.swift in Sources */,
+				54B571FC29004F0900E8A412 /* ForwardRenderPass.swift in Sources */,
+				54B571E829004EC700E8A412 /* Submesh.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		54B571A629004D3200E8A412 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OBJC_BRIDGING_HEADER = "swifty-protein/LigandViewerEngine/Shaders+Headers/Common.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		54B571A729004D3200E8A412 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OBJC_BRIDGING_HEADER = "swifty-protein/LigandViewerEngine/Shaders+Headers/Common.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		54B571A929004D3200E8A412 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"swifty-protein/Preview Content\"";
+				DEVELOPMENT_TEAM = 73VBXTPUW8;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.megagosha.souzsnab.swifty-protein";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		54B571AA29004D3200E8A412 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"swifty-protein/Preview Content\"";
+				DEVELOPMENT_TEAM = 73VBXTPUW8;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.megagosha.souzsnab.swifty-protein";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		54B5719529004D3100E8A412 /* Build configuration list for PBXProject "swifty-protein" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				54B571A629004D3200E8A412 /* Debug */,
+				54B571A729004D3200E8A412 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		54B571A829004D3200E8A412 /* Build configuration list for PBXNativeTarget "swifty-protein" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				54B571A929004D3200E8A412 /* Debug */,
+				54B571AA29004D3200E8A412 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		54B571FE29004F4100E8A412 /* XCRemoteSwiftPackageReference "ZIPFoundation" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/weichsel/ZIPFoundation.git";
+			requirement = {
+				branch = development;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		54B571FF29004F4200E8A412 /* ZIPFoundation */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 54B571FE29004F4100E8A412 /* XCRemoteSwiftPackageReference "ZIPFoundation" */;
+			productName = ZIPFoundation;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 54B5719229004D3100E8A412 /* Project object */;
+}
