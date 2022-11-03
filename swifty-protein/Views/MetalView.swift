@@ -4,11 +4,12 @@ import MetalKit
 
 struct MetalView: View {
     let ligand: Ligand?
-    @State public var renderer: Renderer?
+    @Binding public var renderer: Renderer?
     @State private var metalView = MTKView()
     @State private var previousTranslation = CGSize.zero
     @State private var previousScroll: CGFloat = 1
     @Binding var atomSelected: AtomLigand?
+    
     var body: some View {
         MetalViewRepresentable(
             renderer: renderer,

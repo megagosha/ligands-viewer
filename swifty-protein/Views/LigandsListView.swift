@@ -6,8 +6,8 @@ struct LigandsListView: View {
     @State private var searchText = ""
 
     var body: some View {
-        NavigationView {
-            if #available(macOS 12.0, iOS 15, *) {
+//        NavigationView {
+//            if #available(macOS 12.0, iOS 15, *) {
                 List {
                     ForEach(searchResults) { el in
                         NavigationLink {
@@ -17,10 +17,10 @@ struct LigandsListView: View {
                         }
                     }
                 }.searchable(text: $searchText, prompt: "Type to search").disableAutocorrection(true).navigationTitle("Proteins")
-            } else {
+//            } else {
                 // Fallback on earlier versions
-            }
-        }
+//            }
+//        }
     }
     
     var searchResults: [Ligand] {

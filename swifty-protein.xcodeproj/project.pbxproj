@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		541BC759290AABB00073F9EB /* MTKView+toImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 541BC758290AABB00073F9EB /* MTKView+toImage.swift */; };
+		547DAA8D291031310065E830 /* ShareActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547DAA8C291031310065E830 /* ShareActivityViewController.swift */; };
 		54870F32290050940055B88A /* LigandsDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54870F31290050940055B88A /* LigandsDownloader.swift */; };
 		54870F34290051F80055B88A /* ligands.txt in Resources */ = {isa = PBXBuildFile; fileRef = 54870F33290051F80055B88A /* ligands.txt */; };
 		54B5719E29004D3100E8A412 /* SwiftyProteinApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54B5719D29004D3100E8A412 /* SwiftyProteinApp.swift */; };
@@ -49,6 +51,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		541BC756290A83A90073F9EB /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		541BC758290AABB00073F9EB /* MTKView+toImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MTKView+toImage.swift"; sourceTree = "<group>"; };
+		547DAA8C291031310065E830 /* ShareActivityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareActivityViewController.swift; sourceTree = "<group>"; };
 		54870F31290050940055B88A /* LigandsDownloader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LigandsDownloader.swift; sourceTree = "<group>"; };
 		54870F33290051F80055B88A /* ligands.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ligands.txt; sourceTree = "<group>"; };
 		54B5719A29004D3100E8A412 /* swifty-protein.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "swifty-protein.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -162,6 +167,7 @@
 				54B571AB29004D5400E8A412 /* Views */,
 				54B571A129004D3200E8A412 /* Assets.xcassets */,
 				54B571A329004D3200E8A412 /* Preview Content */,
+				541BC756290A83A90073F9EB /* Launch Screen.storyboard */,
 			);
 			path = "swifty-protein";
 			sourceTree = "<group>";
@@ -180,6 +186,7 @@
 				54B571AE29004D7400E8A412 /* AtomSelectedView.swift */,
 				54B571AD29004D7400E8A412 /* ContentView.swift */,
 				54B571B029004D7400E8A412 /* LigandsListView.swift */,
+				547DAA8C291031310065E830 /* ShareActivityViewController.swift */,
 				54B571AF29004D7400E8A412 /* LoadingView.swift */,
 				54B571AC29004D7400E8A412 /* MetalView.swift */,
 				54B5719D29004D3100E8A412 /* SwiftyProteinApp.swift */,
@@ -220,6 +227,7 @@
 				54B571D829004EC100E8A412 /* InputController.swift */,
 				54B571DC29004EC200E8A412 /* Model.swift */,
 				54B571D629004EC100E8A412 /* Settings.swift */,
+				541BC758290AABB00073F9EB /* MTKView+toImage.swift */,
 				54870F35290052E70055B88A /* Objects */,
 				54870F3729005CC70055B88A /* Renderer */,
 				54B571F329004ED700E8A412 /* MathLibrary.swift */,
@@ -336,10 +344,12 @@
 				54B571F429004ED700E8A412 /* MathLibrary.swift in Sources */,
 				54B571E929004EC700E8A412 /* SceneLighting.swift in Sources */,
 				54B571B529004D7400E8A412 /* LigandsListView.swift in Sources */,
+				547DAA8D291031310065E830 /* ShareActivityViewController.swift in Sources */,
 				54B571BE29004DE900E8A412 /* Bond.swift in Sources */,
 				54B571BF29004DE900E8A412 /* Ligand.swift in Sources */,
 				54B571E229004EC200E8A412 /* Lighting.metal in Sources */,
 				54B571E329004EC200E8A412 /* Renderer.swift in Sources */,
+				541BC759290AABB00073F9EB /* MTKView+toImage.swift in Sources */,
 				54B571B229004D7400E8A412 /* ContentView.swift in Sources */,
 				54B571EF29004ECC00E8A412 /* Transform.swift in Sources */,
 				54B5719E29004D3100E8A412 /* SwiftyProteinApp.swift in Sources */,
@@ -407,7 +417,8 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -462,7 +473,8 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -484,18 +496,24 @@
 				DEVELOPMENT_TEAM = 73VBXTPUW8;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = Ligands;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.megagosha.souzsnab.swifty-protein";
+				MARKETING_VERSION = 1.2;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.megagosha.swifty-protein";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -513,18 +531,24 @@
 				DEVELOPMENT_TEAM = 73VBXTPUW8;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = Ligands;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.megagosha.souzsnab.swifty-protein";
+				MARKETING_VERSION = 1.2;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.megagosha.swifty-protein";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

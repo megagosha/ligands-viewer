@@ -3,6 +3,7 @@ import ZIPFoundation
 
 class LigandLoader: ObservableObject {
     @Published var isReady: Bool = false
+    //    @Published var error: Bool = false
     @Published var showError: Bool = false
     
     var downloadLinks: [URL] = []
@@ -151,9 +152,10 @@ class LigandLoader: ObservableObject {
     //TODO: remove fatalError
     private func downloadBatch(ix: Int, completion: @escaping (URL?, URL?)->Void) {
         LigandDownloader.loadFileAsync(folderPath: getDocumentsDirectory(), url: self.downloadLinks[ix], fileName: "batch" + String(ix) + ".zip") { (pathToZip, error) in
-            if (error != nil || pathToZip == nil) {
-                self.showError = true
+            if (error != nil || pathToZip == nil || self.showError != false) {
+                
                 //                fatalError("Failed to download file")
+                print("error while downloading occured")
                 completion(nil, nil)
             }
             else {

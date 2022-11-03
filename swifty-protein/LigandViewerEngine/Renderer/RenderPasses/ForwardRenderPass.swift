@@ -14,13 +14,13 @@ struct ForwardRenderPass: RenderPass {
         depthStencilState = Self.buildDepthStencilState()
     }
     
-    static func buildDepthStencilState() -> MTLDepthStencilState? {
-        let descriptor = MTLDepthStencilDescriptor()
-        descriptor.depthCompareFunction = .less
-        descriptor.isDepthWriteEnabled = true
-        return Renderer.device.makeDepthStencilState(
-            descriptor: descriptor)
-    }
+//    static func buildDepthStencilState() -> MTLDepthStencilState? {
+//        let descriptor = MTLDepthStencilDescriptor()
+//        descriptor.depthCompareFunction = .less
+//        descriptor.isDepthWriteEnabled = true
+//        return Renderer.device.makeDepthStencilState(
+//            descriptor: descriptor)
+//    }
     
     mutating func resize(view: MTKView, size: CGSize) {
     }

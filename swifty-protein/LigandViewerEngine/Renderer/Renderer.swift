@@ -2,21 +2,22 @@ import MetalKit
 import SwiftUI
 // swiftlint:disable implicitly_unwrapped_optional
 
-class Renderer: NSObject {
+class Renderer: NSObject, Identifiable {
     @Binding var selectedAtom: AtomLigand?
     static var device: MTLDevice!
     static var commandQueue: MTLCommandQueue!
     static var library: MTLLibrary!
+    var mtk:  MTKView
     var forwardRenderPass: ForwardRenderPass
     var objectIdRenderPass: ObjectIdRenderPass
     var pipelineState: MTLRenderPipelineState!
-    var mtk:  MTKView
     //    let depthStencilState: MTLDepthStencilState?
     var timer: Float = 0
     var uniforms = Uniforms()
     var params = Params()
     let ligand: Ligand?
     var processClick: Bool = false
+    var isViewBlocked: Bool = false
     var point: CGPoint?
     // the models to render
     lazy var scene = LigandScene(ligand: ligand)
@@ -31,7 +32,6 @@ class Renderer: NSObject {
         Renderer.commandQueue = commandQueue
         metalView.device = device
         
-        // create the shader function library
         let library = device.makeDefaultLibrary()
         Self.library = library
         objectIdRenderPass = ObjectIdRenderPass()
@@ -43,11 +43,6 @@ class Renderer: NSObject {
         let color = Color(UIColor.systemBackground)
 #endif
         let res = color.rgb
-        //        metalView.clearColor = MTLClearColor(
-        //            red: 0.93,
-        //            green: 0.97,
-        //            blue: 1.0,
-        //            alpha: 1.0)
         metalView.clearColor = MTLClearColor(
             red: Double(res.x),
             green: Double(res.y),
@@ -60,7 +55,8 @@ class Renderer: NSObject {
         mtk.preferredFramesPerSecond = 120
         metalView.delegate = self
         mtkView(metalView, drawableSizeWillChange: metalView.bounds.size)
-        updateTouchToPixel()
+        metalView.framebufferOnly = false
+        
     }
     
     
@@ -84,9 +80,9 @@ extension Renderer: MTKViewDelegate {
         DispatchQueue.main.async {
             InputController.shared.xFromTouch = self.mtk.bounds.maxX / self.mtk.drawableSize.width
             InputController.shared.yFromTouch = self.mtk.bounds.maxY / self.mtk.drawableSize.height
-//            print("xFrom \(InputController.shared.xFromTouch)")
-//            print("yFrom \(InputController.shared.yFromTouch)")
-
+            //            print("xFrom \(InputController.shared.xFromTouch)")
+            //            print("yFrom \(InputController.shared.yFromTouch)")
+            
         }
     }
     
@@ -104,7 +100,9 @@ extension Renderer: MTKViewDelegate {
               let descriptor = view.currentRenderPassDescriptor else {
             return
         }
-        
+        if isViewBlocked {
+            return
+        }
         timer += 0.005
         //        renderEncoder.setDepthStencilState(depthStencilState)
         //        renderEncoder.setRenderPipelineState(pipelineState)
@@ -144,6 +142,30 @@ extension Renderer: MTKViewDelegate {
                 self.processClick = false
             }
         }
+        //        commandBuffer.addCompletedHandler( {x in
+        //            x.commandQueue.device.
+        //
+        //        })
+        //        if let blitEncoder = commandBuffer.makeBlitCommandEncoder() {
+        //            let textureDescriptor = MTLTextureDescriptor.texture2DDescriptor(
+        //                pixelFormat: mtk.colorPixelFormat,
+        //                width: drawable.texture.width,
+        //                height: drawable.texture.height,
+        //                mipmapped: false)
+        //
+        //              textureDescriptor.usage = [.shaderWrite, .shaderRead]
+        //
+        //            guard let texture: MTLTexture = commandBuffer.device.makeTexture(descriptor: textureDescriptor) else
+        //              {
+        //                print("ERROR")
+        //                return
+        //              }
+        
+        //            let region = MTLRegion.init(origin: MTLOrigin.init(x: 0, y: 0, z: 0), size: MTLSize.init(width: drawable.texture.width, height: drawable.texture.height, depth: 1));
+        
+        //            blitEncoder.copy(from: drawable.texture, to: texture)
+        //            blitEncoder.endEncoding()
+        //        }
         commandBuffer.present(drawable)
         commandBuffer.commit()
     }
@@ -166,5 +188,12 @@ extension Renderer: MTKViewDelegate {
         }
         return (x, y)
     }
-    
+#if os(iOS)
+    public func shareView()->UIImage? {
+        guard let cg = mtk.currentDrawable!.texture.toImage() else {
+            return nil
+        }
+        return UIImage(cgImage: cg, scale: 1, orientation: .up)
+    }
+#endif
 }

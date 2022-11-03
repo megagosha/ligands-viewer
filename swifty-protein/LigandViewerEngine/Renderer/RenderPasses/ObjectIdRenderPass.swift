@@ -10,7 +10,7 @@ struct ObjectIdRenderPass: RenderPass {
 
     mutating func resize(view: MTKView, size: CGSize) {
         idTexture = Self.makeTexture(size: size, pixelFormat: .r32Uint, label: "ID Texture", storageMode: .shared)
-        depthTexture = Self.makeTexture(size: size, pixelFormat: .depth32Float, label: "IDd Depth Texture")
+        depthTexture = Self.makeTexture(size: size, pixelFormat: .depth32Float, label: "IDd Depth Texture", storageMode: .private)
     }
     
     init() {
